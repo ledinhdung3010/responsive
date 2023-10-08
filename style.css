@@ -44,9 +44,10 @@
 .header .nav_center .section{
     display: flex;
 }
-.nav_center .section li{
+.nav_center .section > li{
     list-style: none;
     padding: 0 15px;
+    position: relative;
 }
 .header .nav_center a{
     text-decoration: none;
@@ -54,6 +55,7 @@
     font-size: 17px;
 
 }
+
 .nav_right button{
     border: none;
     
@@ -468,6 +470,11 @@
 .header .nav .nav_left_mobile{
     display: none;
 }
+.header .nav_center_mobile{
+    transform: translateX(-100%);
+}
+
+
 
 @media only screen and (max-width:63.9375em) {
    .width_all{
@@ -479,10 +486,53 @@
     .header .nav .nav_left{
         display: none;
     }
+    .header .nav_center{
+        display: none;
+    }
     .header .nav .nav_left_mobile{
         display: block;
-
+        
     }
+    .header .nav_center_mobile{
+        position: fixed;
+        left: 0;
+        top: 76px;
+        bottom: 0;
+        width: 200px;
+        background-color: #fff;
+        z-index: 99;
+    
+    }
+    .nav_center_mobile .close_nav{
+        padding: 20px;
+        text-align: right;
+    }
+    .nav_center_mobile .section_mobile{
+        text-align: center;
+       
+    }
+    .nav_center_mobile .section_mobile > li{
+        list-style: none;
+        padding:15px 0;
+    }
+    .nav_center_mobile .section_mobile a{
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .sub_nav_mobile .sub_section_mobile li{
+        padding: 10px 0;
+    }
+
+    .section_mobile .fa-chevron-up{
+        display: none;
+    }
+    .section_mobile .sub_nav_mobile{
+        display: none;
+    }
+   
+    
+
 
 
 }
@@ -583,6 +633,32 @@
     
 }
 @media only screen and (min-width:63.9376em) {
+    .nav_center .section .sub_nav{
+        position: absolute;
+        background-color: #fff;
+        left: 0;
+        min-width: 160px;
+        display: none;
+    }
+    .sub_nav .sub_section li{
+        list-style: none;
+    }
+    .sub_nav .sub_section li a{
+        display: block;
+        padding: 10px;
+    }
+    
+    .section li:hover .sub_nav{
+        display: block;
+    }
+    .sub_nav .sub_section li:hover a{
+        background-color: #000339;
+        color: #fff;
+        
+    }
+    .header .nav_center_mobile{
+        display: none;
+    }
    
 }
 

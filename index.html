@@ -17,7 +17,15 @@
                 <div class="nav_center">
                     <ul class="section">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Features</a></li>
+                        <li class="click_subnav"><a href="#">Features</a> <i class="fa-solid fa-angle-down"></i></i>
+                            <div class="sub_nav">
+                                <ul class="sub_section">
+                                    <li><a href="">Tour</a></li>
+                                    <li><a href="">Band</a></li>
+                                    <li><a href="">TechComBank</a></li>
+                                </ul>
+                            </div>
+                        </li>
                         <li><a href="#">Services</a></li>
                         <li><a href="#">Conteact</a></li>
                         <li><a href="#">Resources</a></li>
@@ -25,13 +33,33 @@
                 </div>
             </div>
             <div class="nav_left_mobile">
-                <i class="fa-solid fa-bars"></i>
+                <i onclick="show()" class="fa-solid fa-bars"></i>
             </div>
             
             <div class="nav_right">
                 <button class="singin">Sign in</button>
                 <button class="signup">Sign up</button>
             </div>
+        </div>
+        <div class="nav_center_mobile">
+            <div class="close_nav">
+                <i onclick="closenav()" class="fa-solid fa-xmark"></i>
+            </div>
+            <ul class="section_mobile">
+                <li><a href="#">Home</a></li>
+                <li class="click_subnav_mobile"><a href="#">Features</a> <i class="fa-solid fa-angle-down down"></i><i class="fa-solid fa-chevron-up up"></i>
+                    <div class="sub_nav_mobile">
+                        <ul class="sub_section_mobile">
+                            <li><a href="">Tour</a></li>
+                            <li><a href="">Band</a></li>
+                            <li><a href="">TechComBank</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Conteact</a></li>
+                <li><a href="#">Resources</a></li>
+            </ul>
         </div>
         <div class="content_header width_all">
             <div class="content_left">
@@ -353,6 +381,6 @@
 
     </div>
     
-    
+    <script src="./main.js"></script>
 </body>
 </html>
